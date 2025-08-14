@@ -39,13 +39,13 @@ function fight(attacker, opponent){
 if (atackOrHeal === "A"){
   let random= Math.floor(Math.random() * 20) + 5;
   opponent.health = opponent.health - random
-  console.log("The opponent has" + opponent.health + " health")
+  console.log("The opponent has " + opponent.health + " health")
   console.log("The opponent has dealt " + random + " damage")
 }
 if (atackOrHeal === "H"){
   let random= Math.floor(Math.random() * 15) +5;
   attacker.health = attacker.health + random
-  console.log("You have healed yourself for" + random)
+  console.log("You have healed yourself for " + random)
 }
 }
 startGame()

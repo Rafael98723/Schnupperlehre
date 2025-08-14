@@ -15,5 +15,5 @@ sayHello("Was ist das grösste Land der Welt?", "Russland")
 console.log(points)
 
 if (points === 4){
-    console.log ("Well Done")
+    console.log ("Super gemacht!")
 }
