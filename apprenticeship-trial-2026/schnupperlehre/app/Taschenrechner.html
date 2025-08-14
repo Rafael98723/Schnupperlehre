@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rechner</title>
+    <script>
+      function callNumber(number) {
+        let numberTab = document.getElementById("numberTab");
+        numberTab.innerText = numberTab.innerText + number;
+      }
+      function clearText() {
+        let numberTab = document.getElementById("numberTab");
+        numberTab.innerText = "";
+      }
+      function deleteText() {
+        let numberTab = document.getElementById("numberTab");
+        numberTab.innerText = numberTab.innerText.slice(0, -1);
+      }
+      function calculate() {
+        let numberTab = document.getElementById("numberTab");
+        numberTab.innerText = eval(numberTab.innerText);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="numberTab"></div>
+    <div>
+      <button onclick="callNumber(7)">7</button>
+      <button onclick="callNumber(8)">8</button>
+      <button onclick="callNumber(9)">9</button>
+      <button onclick="callNumber('/')">/</button>
+    </div>
+    <div>
+      <button onclick="callNumber(4)">4</button>
+      <button onclick="callNumber(5)">5</button>
+      <button onclick="callNumber(6)">6</button>
+      <button onclick="callNumber('*')">*</button>
+    </div>
+    <div>
+      <button onclick="callNumber(1)">1</button>
+      <button onclick="callNumber(2)">2</button>
+      <button onclick="callNumber(3)">3</button>
+      <button onclick="callNumber('-')">-</button>
+    </div>
+    <div>
+      <button onclick="callNumber(0)">0</button>
+      <button onclick="callNumber('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="callNumber('+')">+</button>
+    </div>
+    <div>
+      <button onclick="clearText()">clear</button>
+      <button onclick="deleteText()">delete</button>
+    </div>
+  </body>
+</html>
